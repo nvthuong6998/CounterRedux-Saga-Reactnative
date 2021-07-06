@@ -5,6 +5,7 @@ import {View, Text} from 'react-native';
 import {Provider} from 'react-redux';
 import {createStore, applyMiddleware} from 'redux';
 import CounterContainer from './src/containers/CounterContainer';
+import MovieContainer from './src/containers/MovieContainer';
 
 //Redux - saga
 import rootReducers from './src/reducers/rootReducers';
@@ -20,7 +21,7 @@ const store = createStore(rootReducers, applyMiddleware(sagaMiddleware));
 const App = () => {
   return (
     <Provider store={store}>
-      <CounterContainer />
+      <MovieContainer />
     </Provider>
   );
 };
